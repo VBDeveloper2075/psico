@@ -1,0 +1,21 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --sand-50: #faf9f7;
+  --sand-100: #f5f3ef;
+  --sage-100: #e8ebe5;
+  --sage-200: #d1d9cb;
+  --clay-200: #d4cbc2;
+  --whatsapp: #25d366;
+  --whatsapp-hover: #20bd5a;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply antialiased text-stone-700;
+}
