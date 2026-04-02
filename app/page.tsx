@@ -13,7 +13,11 @@ import {
   MessageCircle,
   Menu,
   X,
+  Zap,
+  Database,
 } from "lucide-react";
+
+const CB_JAMSTACK_AGENCY_URL = "https://si-cb-vendes-mejor.com.ar/";
 
 // ============ CONFIGURACIÓN ============
 const WHATSAPP_NUMBER = "54911XXXXXXXX"; // Reemplazar con número real (ej: 5491123456789)
@@ -34,7 +38,7 @@ function Header() {
     <header className="fixed top-0 left-0 right-0 z-50 bg-sand-50/95 backdrop-blur-sm border-b border-sand-200/80">
       <nav className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4 flex items-center justify-between">
         <Link href="#" className="font-heading text-xl sm:text-2xl font-semibold text-stone-800">
-          Dr. [Nombre]
+          Lic. Lucas Garay
         </Link>
         <div className="flex items-center gap-4 sm:gap-6">
           <div className="hidden sm:flex items-center gap-8">
@@ -135,11 +139,12 @@ function About() {
           <div className="flex-shrink-0">
             <div className="relative w-56 h-56 sm:w-72 sm:h-72 rounded-full overflow-hidden shadow-xl ring-4 ring-sage-200/50">
               <Image
-                src="https://images.unsplash.com/photo-1573497019940-1c28c88b4f3e?w=400&q=80"
-                alt="Psicólogo profesional"
+                src="/psicologo-terapia-psicoanalitica.png"
+                alt="Psicólogo clínico y psicoanalista"
                 fill
-                className="object-cover"
+                className="object-cover object-top"
                 sizes="(max-width: 640px) 224px, 288px"
+                priority
               />
             </div>
           </div>
@@ -326,7 +331,7 @@ function Footer() {
       <div className="max-w-6xl mx-auto">
         <div className="flex flex-col items-center gap-6 text-center sm:text-left sm:flex-row sm:justify-between">
           <p className="text-stone-600 text-sm order-2 sm:order-1">
-            © {new Date().getFullYear()} Dr. [Nombre]. Todos los derechos
+            © {new Date().getFullYear()} Lic. Lucas Garay. Todos los derechos
             reservados.
           </p>
           <p className="text-stone-500 text-sm order-3 sm:order-2">Matrícula MN 12345</p>
@@ -343,6 +348,34 @@ function Footer() {
             <a href="#contacto" className="text-stone-600 hover:text-stone-900 text-sm">
               Contacto
             </a>
+          </div>
+        </div>
+
+        <div className="mt-10 pt-8 border-t border-sand-200/80">
+          <div className="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-6">
+            <div className="flex flex-col sm:flex-row sm:items-center gap-4 text-center sm:text-left">
+              <div className="flex items-center justify-center gap-2 shrink-0">
+                <Zap className="w-5 h-5 text-orange-500" aria-hidden />
+                <Database className="w-5 h-5 text-teal-600" aria-hidden />
+              </div>
+              <div>
+                <p className="text-sm text-stone-700 leading-snug">
+                  Desarrollado con tecnología{" "}
+                  <strong className="font-semibold text-stone-800">Jamstack</strong> por{" "}
+                  <a
+                    href={CB_JAMSTACK_AGENCY_URL}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="font-semibold text-stone-800 underline decoration-stone-300 underline-offset-2 hover:decoration-teal-600 hover:text-teal-800 transition"
+                  >
+                    CB Jamstack Agency
+                  </a>
+                </p>
+                <p className="text-xs text-stone-500 mt-1.5">
+                  Expertos en velocidad y control de datos.
+                </p>
+              </div>
+            </div>
           </div>
         </div>
       </div>

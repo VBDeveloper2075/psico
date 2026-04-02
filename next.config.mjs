@@ -1,5 +1,7 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Oculta el badge rojo "N" / "Issue" en desarrollo (solo en `npm run dev`)
+  devIndicators: false,
   images: {
     remotePatterns: [
       {

@@ -42,7 +42,7 @@ export default function SolicitarTurnoPage() {
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     const message = buildWhatsAppMessage(formData);
-    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+    const url = `https://wa.me/${+5491157413145}?text=${encodeURIComponent(message)}`;
     window.open(url, "_blank");
   };
 
